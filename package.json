@@ -1,0 +1,15 @@
+{
+  "name": "nus-online-judge",
+  "version": "1.0.0",
+  "description": "Redirect service for WolframCode",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+} 
