@@ -16,4 +16,4 @@ pids
 *.pid.lock
 
 # Fly.io deployment files
-.dockerignore 
+.dockerignore .DS_Store

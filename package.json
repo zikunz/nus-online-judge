@@ -1,5 +1,5 @@
 {
-  "name": "nus-online-judge",
+  "name": "nus-wolfram-code-redirect",
   "version": "1.0.0",
   "description": "Redirect service for WolframCode",
   "main": "index.js",
