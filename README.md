@@ -40,6 +40,19 @@ Experience WolframCode firsthand at [https://nus-wolfram-code.fly.dev/](https://
 - **Accessibility Features**: Toggle between light and dark themes to reduce eye strain during extended coding sessions
 - **Visual Learning Aids**: Benefit from animated test results that visually demonstrate the execution flow and outcomes
 
+## Local Submission Storage with IndexedDB
+
+WolframCode uses IndexedDB to store user submissions directly in the browser:
+
+- **No Login Required**: Students can immediately start solving problems without creating accounts
+- **Persistent Storage**: Submissions are saved locally in the browser's IndexedDB storage (50-100MB capacity)
+- **Automatic Migration**: Any previous submissions stored in localStorage are automatically migrated to IndexedDB
+- **Storage Management**: Users can clear all submissions or submissions for specific problems through the UI
+- **Privacy Focused**: All data remains on the user's device - nothing is sent to a server
+- **Cross-Session Access**: Submissions persist between browser sessions and can be reviewed at any time
+
+This approach allows students to track their progress and review past submissions without the complexity of user accounts, while providing significantly more storage capacity than the previous localStorage implementation.
+
 ## Technical Architecture
 
 WolframCode employs a modern microservices architecture with two primary components that work together to deliver a seamless user experience:
@@ -298,7 +311,7 @@ As an educator, I developed WolframCode with specific pedagogical principles in 
 WolframCode is continuously evolving, with several planned enhancements for future releases:
 
 - **User Authentication**: Secure login system with role-based access control
-- **Submission History Stored in a Database**: Persistent storage of user submissions with progress tracking
+- **Cloud Submission Storage**: Optional cloud storage for submissions to access across devices
 - **Leaderboard System**: Competitive element with performance-based rankings
 - **Code Plagiarism Detection**: Tools to identify and prevent code plagiarism
 - **Interactive Tutorials**: Guided learning experiences for key concepts
