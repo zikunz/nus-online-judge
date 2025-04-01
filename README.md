@@ -18,11 +18,11 @@ This project involved implementing several non-trivial components, including:
   <img src="./public/wolfram-mascot.png" alt="WolframCode Logo">
 </p>
 
-The source code for both frontend and backend is currently not open-sourced. They are hosted in some of my private GitHub repos.
+The source code for both frontend and backend is currently not open-sourced. They are hosted in some of my private GitHub repos. If approved, I will open-source my code and develop this platform further in the upcoming holiday. I plan to involve students to develop this platform too.
 
 ## Live Demo
 
-Experience WolframCode firsthand at [https://nus-wolfram-code.fly.dev/](https://nus-wolfram-code.fly.dev/)
+Experience WolframCode firsthand at [https://nus-wolfram-code.fly.dev/](https://nus-wolfram-code.fly.dev/).
 
 ## Key Features
 
@@ -40,18 +40,19 @@ Experience WolframCode firsthand at [https://nus-wolfram-code.fly.dev/](https://
 - **Accessibility Features**: Toggle between light and dark themes to reduce eye strain during extended coding sessions
 - **Visual Learning Aids**: Benefit from animated test results that visually demonstrate the execution flow and outcomes
 
-## Local Submission Storage with IndexedDB
+## Local Submission Storage
 
-WolframCode uses IndexedDB to store user submissions directly in the browser:
+WolframCode uses localStorage to store user submissions directly in the browser:
 
 - **No Login Required**: Students can immediately start solving problems without creating accounts
-- **Persistent Storage**: Submissions are saved locally in the browser's IndexedDB storage (50-100MB capacity)
-- **Automatic Migration**: Any previous submissions stored in localStorage are automatically migrated to IndexedDB
+- **Persistent Storage**: Submissions are saved locally in the browser's localStorage
 - **Storage Management**: Users can clear all submissions or submissions for specific problems through the UI
 - **Privacy Focused**: All data remains on the user's device - nothing is sent to a server
 - **Cross-Session Access**: Submissions persist between browser sessions and can be reviewed at any time
 
 This approach allows students to track their progress and review past submissions without the complexity of user accounts, while providing significantly more storage capacity than the previous localStorage implementation.
+
+TODO: use IndexedDB which has much larger size to store code submissions than localStorage. Students will need to manually clear localStorage if it reaches the upper limit.
 
 ## Technical Architecture
 
@@ -391,7 +392,7 @@ For the simplest setup experience, use Docker Compose to run both frontend and b
 
 ## Contributing
 
-Contributions to WolframCode are welcome! Whether you're fixing bugs, adding features, or improving documentation, your help is appreciated.
+Contributions to WolframCode are welcome! Whether you are fixing bugs, adding features, or improving documentation, your help is appreciated.
 
 ### Contribution Guidelines
 
@@ -439,4 +440,4 @@ I welcome feedback, questions, and collaboration opportunities. Feel free to rea
 - **GitHub**: [zikunz](https://github.com/zikunz)
 - **LinkedIn**: [Zikun Zhu](https://www.linkedin.com/in/zhu-zikun/)
 
-As an educator and developer, I'm passionate about creating tools that enhance the learning experience. If you have ideas for improving WolframCode or are interested in adapting it for your own educational context, I'd be delighted to discuss possibilities. 
+As an educator and developer, I am passionate about creating tools that enhance the learning experience. If you have ideas for improving WolframCode or are interested in adapting it for your own educational context, I would be delighted to discuss possibilities. 
